@@ -1,0 +1,36 @@
+
+const express = require('express');
+const router = express.Router();
+const usuariosControlador = require('../controlador/usuariosControlador'); 
+
+// Buscar usuarios por ID
+router.get('/id/:id', (req, res) => {
+    console.log('Ruta /id/:id alcanzada');
+    usuariosControlador.buscarPorId(req, res);
+  });
+
+// Buscar usuarios por nombre
+router.get('/id/:id', (req, res) => {
+    console.log('Ruta /id/:id alcanzada');
+    usuariosControlador.buscarPorNombre(req, res);
+  });
+// Buscar usuarios por fecha
+router.get('/id/:id', (req, res) => {
+    console.log('Ruta /id/:id alcanzada');
+    usuariosControlador.buscarPorFecha(req, res);
+  });
+
+// Buscar correos de los usuarios
+router.get('/id/:id', (req, res) => {
+    console.log('Ruta /id/:id alcanzada');
+    usuariosControlador.buscarPorCorreo(req, res);
+  });
+
+// Buscar contraseñas de usuarios
+router.get('/id/:id', (req, res) => {
+    console.log('Ruta /id/:id alcanzada');
+    usuariosControlador.buscarPorContra(req, res);
+  });
+
+
+module.exports = router;
